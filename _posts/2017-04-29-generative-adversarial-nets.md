@@ -27,7 +27,7 @@ $$
 
 이 논문에 예시된 알고리즘은 아래와 같습니다.
 
-> ![Algorithm1]({{ site.baseurl }}/images/2017-04-29-generative-adversarial-nets-algorithm1.png)
+> ![Algorithm1]({{ site.baseurl }}/media/2017-04-29-generative-adversarial-nets-algorithm1.png)
 
 요약하면, stochastic gradient descent (SGD) 계열의 알고리즘을 적용해 minibatch 단위로 Discriminator $D(x)$와 Generator $G(z)$를 번갈아 가며 training 시킵니다. 일반적으로 $D(x)$가 $G(z)$보다 빨리 성장하는 경향이 있습니다. 그런 경우, $G(z)$가 아직 미숙한데 $D(x)$가 너무 결과를 잘 판별해 버리면 $G(z)$가 쉽게 죽어버립니다. 두 모델이 균형 있게 성장하도록 많은 튜닝이 필요합니다. 
 
