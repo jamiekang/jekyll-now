@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>README - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+<div id="table-of-contents">
+  <nav class="section">
+    <h3 class="section-header">Table of Contents</h3>
+    <ul>
+      <li><a href="#label-Jekyll+Now">Jekyll Now</a>
+      <li><a href="#label-Quick+Start">Quick Start</a>
+      <li><a href="#label-Step+1%29+Fork+Jekyll+Now+to+your+User+Repository">Step 1) Fork Jekyll Now to your User Repository</a>
+      <li><a href="#label-Step+2%29+Customize+and+view+your+site">Step 2) Customize and view your site</a>
+      <li><a href="#label-Step+3%29+Publish+your+first+blog+post">Step 3) Publish your first blog post</a>
+      <li><a href="#label-Local+Development">Local Development</a>
+      <li><a href="#label-Moar%21">Moar!</a>
+      <li><a href="#label-Jekyll+Now+Features">Jekyll Now Features</a>
+      <li><a href="#label-Questions%3F">Questions?</a>
+      <li><a href="#label-Other+forkable+themes">Other forkable themes</a>
+      <li><a href="#label-Credits">Credits</a>
+      <li><a href="#label-Contributing">Contributing</a>
+    </ul>
+  </nav>
+</div>
+
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./404_md.html">404</a>
+  
+    <li class="file"><a href="./CNAME.html">CNAME</a>
+  
+    <li class="file"><a href="./LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+    <li class="file"><a href="./_includes/analytics_html.html">analytics.html</a>
+  
+    <li class="file"><a href="./_includes/disqus_html.html">disqus.html</a>
+  
+    <li class="file"><a href="./_includes/meta_html.html">meta.html</a>
+  
+    <li class="file"><a href="./_includes/svg-icons_html.html">svg-icons.html</a>
+  
+    <li class="file"><a href="./_layouts/page_html.html">page.html</a>
+  
+    <li class="file"><a href="./_layouts/post_html.html">post.html</a>
+  
+    <li class="file"><a href="./_posts/2014-3-3-Hello-World_md.html">2014-3-3-Hello-World</a>
+  
+    <li class="file"><a href="./_sass/_highlights_scss.html">_highlights.scss</a>
+  
+    <li class="file"><a href="./_sass/_reset_scss.html">_reset.scss</a>
+  
+    <li class="file"><a href="./_sass/_svg-icons_scss.html">_svg-icons.scss</a>
+  
+    <li class="file"><a href="./_sass/_variables_scss.html">_variables.scss</a>
+  
+    <li class="file"><a href="./_site/robots_txt.html">robots</a>
+  
+    <li class="file"><a href="./_site/sitemap_xml.html">sitemap.xml</a>
+  
+    <li class="file"><a href="./_site/style_css.html">style.css</a>
+  
+    <li class="file"><a href="./about_md.html">about</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./index_html.html">index.html</a>
+  
+    <li class="file"><a href="./style_scss.html">style.scss</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<blockquote>
+<p>March, 2016: If you&#39;re on an old version of Jekyll Now and run into a)
+build warnings or b) syntax highlighting issues caused by <a
+href="https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0">Jekyll
+3 and GitHub Pages updates</a>, just :sparkles:<a
+href="https://github.com/barryclark/jekyll-now/pull/445/files">update your
+_config.yml</a>: and you&#39;ll be set!</p>
+</blockquote>
+
+<h1 id="label-Jekyll+Now">Jekyll Now<span><a href="#label-Jekyll+Now">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<p><strong>Jekyll</strong> is a static site generator that&#39;s perfect for
+GitHub hosted blogs (<a href="https://github.com/jekyll/jekyll">Jekyll
+Repository</a>)</p>
+
+<p><strong>Jekyll Now</strong> makes it easier to create your Jekyll blog, by
+eliminating a lot of the up front setup.</p>
+<ul><li>
+<p>You don&#39;t need to touch the command line</p>
+</li><li>
+<p>You don&#39;t need to install/configure ruby, rvm/rbenv, ruby gems
+:relaxed:</p>
+</li><li>
+<p>You don&#39;t need to install runtime dependencies like markdown
+processors, Pygments, etc</p>
+</li><li>
+<p>If you&#39;re on Windows, this will make setting up Jekyll a lot easier</p>
+</li><li>
+<p>It&#39;s easy to try out, you can just delete your forked repository if you
+don&#39;t like it</p>
+</li></ul>
+
+<p>In a few minutes you&#39;ll be set up with a minimal, responsive blog like
+the one below giving you more time to spend on writing epic blog posts!</p>
+
+<p><img src="http:///images/jekyll-now-theme-screenshot.jpg" /></p>
+
+<h2 id="label-Quick+Start">Quick Start<span><a href="#label-Quick+Start">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<h3 id="label-Step+1%29+Fork+Jekyll+Now+to+your+User+Repository">Step 1) Fork Jekyll Now to your User Repository<span><a href="#label-Step+1%29+Fork+Jekyll+Now+to+your+User+Repository">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+
+<p>Fork this repo, then rename the repository to yourgithubusername.github.io.</p>
+
+<p>Your Jekyll blog will often be viewable immediately at <a
+href="http://yourgithubusername.github.io">yourgithubusername.github.io</a>
+(if it&#39;s not, you can often force it to build by completing step 2)</p>
+
+<p><img src="http:///images/step1.gif" /></p>
+
+<h3 id="label-Step+2%29+Customize+and+view+your+site">Step 2) Customize and view your site<span><a href="#label-Step+2%29+Customize+and+view+your+site">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+
+<p>Enter your site name, description, avatar and many other options by editing
+the _config.yml file. You can easily turn on Google Analytics tracking,
+Disqus commenting and social icons here too.</p>
+
+<p>Making a change to _config.yml (or any file in your repository) will force
+GitHub Pages to rebuild your site with jekyll. Your rebuilt site will be
+viewable a few seconds later at <a
+href="http://yourgithubusername.github.io">yourgithubusername.github.io</a>
+- if not, give it ten minutes as GitHub suggests and it&#39;ll appear soon</p>
+
+<blockquote>
+<p>There are 3 different ways that you can make changes to your blog&#39;s
+files:</p>
+<ol><li>
+<p>Edit files within your new username.github.io repository in the browser at
+GitHub.com (shown below).</p>
+</li><li>
+<p>Use a third party GitHub content editor, like <a
+href="http://prose.io">Prose by Development Seed</a>. It&#39;s optimized
+for use with Jekyll making markdown editing, writing drafts, and uploading
+images really easy.</p>
+</li><li>
+<p>Clone down your repository and make updates locally, then push them to your
+GitHub repository.</p>
+</li></ol>
+</blockquote>
+
+<p>![<em>config.yml](/images/config.png “</em>config.yml”)</p>
+
+<h3 id="label-Step+3%29+Publish+your+first+blog+post">Step 3) Publish your first blog post<span><a href="#label-Step+3%29+Publish+your+first+blog+post">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+
+<p>Edit <code>/_posts/2014-3-3-Hello-World.md</code> to publish your first
+blog post. This <a
+href="http://www.jekyllnow.com/Markdown-Style-Guide/">Markdown
+Cheatsheet</a> might come in handy.</p>
+
+<p><img src="http:///images/first-post.png" /></p>
+
+<blockquote>
+<p>You can add additional posts in the browser on GitHub.com too! Just hit the
++ icon in <code>/_posts/</code> to create new content. Just make sure to
+include the <a
+href="http://jekyllrb.com/docs/frontmatter/">front-matter</a> block at the
+top of each new blog post and make sure the post&#39;s filename is in this
+format: year-month-day-title.md</p>
+</blockquote>
+
+<h2 id="label-Local+Development">Local Development<span><a href="#label-Local+Development">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+<ol><li>
+<p>Install Jekyll and plug-ins in one fell swoop. <code>gem install
+github-pages</code> This mirrors the plug-ins used by GitHub Pages on your
+local machine including Jekyll, Sass, etc.</p>
+</li><li>
+<p>Clone down your fork <code>git clone
+https://github.com/yourusername/yourusername.github.io.git</code></p>
+</li><li>
+<p>Serve the site and watch for markup/sass changes <code>jekyll serve</code></p>
+</li><li>
+<p>View your website at <a href="http://127.0.0.1:4000">127.0.0.1:4000</a>/</p>
+</li><li>
+<p>Commit any changes and push everything to the master branch of your GitHub
+user repository. GitHub Pages will then rebuild and serve your website.</p>
+</li></ol>
+
+<h2 id="label-Moar%21">Moar!<span><a href="#label-Moar%21">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>I&#39;ve created a more detailed walkthrough, <a
+href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/">Build
+A Blog With Jekyll And GitHub Pages</a> over at the Smashing Magazine
+website. Check it out if you&#39;d like a more detailed walkthrough and
+some background on Jekyll. :metal:</p>
+
+<p>It covers:</p>
+<ul><li>
+<p>A more detailed walkthrough of setting up your Jekyll blog</p>
+</li><li>
+<p>Common issues that you might encounter while using Jekyll</p>
+</li><li>
+<p>Importing from Wordpress, using your own domain name, and blogging in your
+favorite editor</p>
+</li><li>
+<p>Theming in Jekyll, with Liquid templating examples</p>
+</li><li>
+<p>A quick look at Jekyll 2.0’s new features, including Sass/Coffeescript
+support and Collections</p>
+</li></ul>
+
+<h2 id="label-Jekyll+Now+Features">Jekyll Now Features<span><a href="#label-Jekyll+Now+Features">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>✓ Command-line free <em>fork-first workflow</em>, using GitHub.com to
+create, customize and post to your blog<br>
+✓ Fully responsive and mobile
+optimized base theme (<strong><a href="http://jekyllnow.com">Theme
+Demo</a></strong>
+✓ Sass/Coffeescript support using Jekyll 2.0<br>
+✓ Free
+hosting on your GitHub Pages user site<br>
+✓ Markdown blogging<br>
+✓ Syntax
+highlighting<br>
+✓ Disqus commenting<br>
+✓ Google Analytics
+integration<br>
+✓ SVG social icons for your footer<br>
+✓ 3 http requests,
+including your avatar</p>
+
+<p>✘ No installing dependencies
+✘ No need to set up local development<br>
+✘ No
+configuring plugins<br>
+✘ No need to spend time on theming<br>
+✘ More time
+to code other things ... wait ✓!</p>
+
+<h2 id="label-Questions%3F">Questions?<span><a href="#label-Questions%3F">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p><a href="https://github.com/barryclark/jekyll-now/issues/new">Open an
+Issue</a> and let&#39;s chat!</p>
+
+<h2 id="label-Other+forkable+themes">Other forkable themes<span><a href="#label-Other+forkable+themes">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>You can use the <a
+href="https://github.com/barryclark/jekyll-now#quick-start">Quick Start</a>
+workflow with other themes that are set up to be forked too! Here are some
+of my favorites:</p>
+<ul><li>
+<p><a href="https://github.com/poole/hyde">Hyde</a> by MDO</p>
+</li><li>
+<p><a href="https://github.com/poole/lanyon">Lanyon</a> by MDO</p>
+</li><li>
+<p><a
+href="https://github.com/mojombo/mojombo.github.io">mojombo.github.io</a>
+by Tom Preston-Werner</p>
+</li><li>
+<p><a href="https://github.com/holman/left">Left</a> by Zach Holman</p>
+</li><li>
+<p><a href="https://github.com/mmistakes/minimal-mistakes">Minimal
+Mistakes</a> by Michael Rose</p>
+</li><li>
+<p><a href="https://github.com/mmistakes/skinny-bones-jekyll">Skinny Bones</a>
+by Michael Rose</p>
+</li></ul>
+
+<h2 id="label-Credits">Credits<span><a href="#label-Credits">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+<ul><li>
+<p><a href="https://github.com/jekyll/jekyll">Jekyll</a> - Thanks to its
+creators, contributors and maintainers.</p>
+</li><li>
+<p><a href="https://github.com/neilorangepeel/Free-Social-Icons">SVG icons</a>
+- Thanks, Neil Orange Peel. They&#39;re beautiful.</p>
+</li><li>
+<p><a href="https://gist.github.com/edwardhotchkiss/2005058">Solarized Light
+Pygments</a> - Thanks, Edward.</p>
+</li><li>
+<p><a href="http://joelglovier.com/writing/">Joel Glovier</a> - Great Jekyll
+articles. I used Joel&#39;s feed.xml in this repository.</p>
+</li><li>
+<p><a href="https://github.com/dfurnes">David Furnes</a>, <a
+href="https://github.com/jonuy">Jon Uy</a>, <a
+href="https://github.com/lkpttn">Luke Patton</a> - Thanks for the
+design/code reviews.</p>
+</li><li>
+<p><a href="https://github.com/bkiers">Bart Kiers</a>, <a
+href="https://github.com/vermluh">Florian Simon</a>, <a
+href="https://github.com/henryaj">Henry Stanley</a>, <a
+href="https://github.com/hunjaelee">Hun Jae Lee</a>, <a
+href="https://github.com/javiercejudo">Javier Cejudo</a>, <a
+href="https://github.com/etelej">Peter Etelej</a>, <a
+href="https://github.com/jaminscript">Ben Abbott</a>, <a
+href="https://github.com/rnicholus">Ray Nicholus</a>, <a
+href="https://github.com/eringrand">Erin Grand</a>, <a
+href="https://github.com/LeoColomb">Léo Colombaro</a>, <a
+href="https://github.com/daattali">Dean Attali</a>, <a
+href="https://github.com/cjerrington">Clayton Errington</a>, <a
+href="https://github.com/coltonfitzgerald">Colton Fitzgerald</a>, <a
+href="https://github.com/sunnankar">Trace Mayer</a> - Thanks for your <a
+href="https://github.com/barryclark/jekyll-now/commits/master">fantastic
+contributions</a> to the project!</p>
+</li></ul>
+
+<h2 id="label-Contributing">Contributing<span><a href="#label-Contributing">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Issues and Pull Requests are greatly appreciated. If you&#39;ve never
+contributed to an open source project before I&#39;m more than happy to
+walk you through how to create a pull request.</p>
+
+<p>You can start by <a
+href="https://github.com/barryclark/jekyll-now/issues/new">opening an
+issue</a> describing the problem that you&#39;re looking to resolve and
+we&#39;ll go from there.</p>
+
+<p>I want to keep Jekyll Now as minimal as possible. Every line of code should
+be one that&#39;s useful to 90% of the people using it. Please bear that in
+mind when submitting feature requests. If it&#39;s not something that most
+people will use, it probably won&#39;t get merged. :guardsman:</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

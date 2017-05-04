@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>style.scss - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./404_md.html">404</a>
+  
+    <li class="file"><a href="./CNAME.html">CNAME</a>
+  
+    <li class="file"><a href="./LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+    <li class="file"><a href="./_includes/analytics_html.html">analytics.html</a>
+  
+    <li class="file"><a href="./_includes/disqus_html.html">disqus.html</a>
+  
+    <li class="file"><a href="./_includes/meta_html.html">meta.html</a>
+  
+    <li class="file"><a href="./_includes/svg-icons_html.html">svg-icons.html</a>
+  
+    <li class="file"><a href="./_layouts/page_html.html">page.html</a>
+  
+    <li class="file"><a href="./_layouts/post_html.html">post.html</a>
+  
+    <li class="file"><a href="./_posts/2014-3-3-Hello-World_md.html">2014-3-3-Hello-World</a>
+  
+    <li class="file"><a href="./_sass/_highlights_scss.html">_highlights.scss</a>
+  
+    <li class="file"><a href="./_sass/_reset_scss.html">_reset.scss</a>
+  
+    <li class="file"><a href="./_sass/_svg-icons_scss.html">_svg-icons.scss</a>
+  
+    <li class="file"><a href="./_sass/_variables_scss.html">_variables.scss</a>
+  
+    <li class="file"><a href="./_site/robots_txt.html">robots</a>
+  
+    <li class="file"><a href="./_site/sitemap_xml.html">sitemap.xml</a>
+  
+    <li class="file"><a href="./_site/style_css.html">style.css</a>
+  
+    <li class="file"><a href="./about_md.html">about</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./index_html.html">index.html</a>
+  
+    <li class="file"><a href="./style_scss.html">style.scss</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  <hr style="height: 1px">
+<hr style="height: 1px">
+
+<p>// // IMPORTS //</p>
+
+<p>@import “reset”; @import “variables”; // Syntax highlighting @import is at
+the bottom of this file</p>
+
+<pre>            /
+BASE RULES</pre>
+
+<p>/</p>
+
+<p>html {</p>
+
+<pre>font-size: 100%;</pre>
+
+<p>}</p>
+
+<p>body {</p>
+
+<pre>      background: $white;
+font: 18px/1.4 $helvetica;
+color: $darkGray;</pre>
+
+<p>}</p>
+
+<p>.container {</p>
+
+<pre>margin: 0 auto;
+max-width: 740px;
+padding: 0 10px;
+width: 100%;</pre>
+
+<p>}</p>
+
+<p>h1, h2, h3, h4, h5, h6 {</p>
+
+<pre>font-family: $helveticaNeue;
+color: $darkerGray;
+font-weight: bold;
+
+line-height: 1.7;
+margin: 1em 0 15px;
+padding: 0;
+
+@include mobile {
+  line-height: 1.4;
+}</pre>
+
+<p>}</p>
+
+<p>h1 {</p>
+
+<pre>font-size: 30px;
+a {
+  color: inherit;
+}</pre>
+
+<p>}</p>
+
+<p>h2 {</p>
+
+<pre>font-size: 24px;</pre>
+
+<p>}</p>
+
+<p>h3 {</p>
+
+<pre>font-size: 20px;</pre>
+
+<p>}</p>
+
+<p>h4 {</p>
+
+<pre>font-size: 18px;
+color: $gray;</pre>
+
+<p>}</p>
+
+<p>p {</p>
+
+<pre>margin: 15px 0;</pre>
+
+<p>}</p>
+
+<p>a {</p>
+
+<pre>color: $blue;
+text-decoration: none;
+      cursor: pointer;
+&amp;:hover, &amp;:active {
+  color: $blue;
+}</pre>
+
+<p>}</p>
+
+<p>ul, ol {</p>
+
+<pre>margin: 15px 0;
+padding-left: 30px;</pre>
+
+<p>}</p>
+
+<p>ul {</p>
+
+<pre>list-style-type: disc;</pre>
+
+<p>}</p>
+
+<p>ol {</p>
+
+<pre>list-style-type: decimal;</pre>
+
+<p>}</p>
+
+<p>ol ul, ul ol, ul ul, ol ol {</p>
+
+<pre>margin: 0;</pre>
+
+<p>}</p>
+
+<p>ul ul, ol ul {</p>
+
+<pre>list-style-type: circle;</pre>
+
+<p>}</p>
+
+<p>em, i {</p>
+
+<pre>font-style: italic;</pre>
+
+<p>}</p>
+
+<p>strong, b {</p>
+
+<pre>font-weight: bold;</pre>
+
+<p>}</p>
+
+<p>img {</p>
+
+<pre>max-width: 100%;</pre>
+
+<p>}</p>
+
+<p>// Fixes images in popup boxes from Google Translate .gmnoprint img {</p>
+
+<pre>max-width: none;</pre>
+
+<p>}</p>
+
+<p>.date {</p>
+
+<pre>font-style: italic;
+color: $gray;</pre>
+
+<p>}</p>
+
+<p>// Specify the color of the selection ::-moz-selection {</p>
+
+<pre>color: $black;
+background: $lightGray;</pre>
+
+<p>} ::selection {</p>
+
+<pre>color: $black;
+background: $lightGray;</pre>
+
+<p>}</p>
+
+<p>// Nicolas Gallagher&#39;s micro clearfix hack // <a
+href="http://nicolasgallagher.com/micro-clearfix-hack">nicolasgallagher.com/micro-clearfix-hack</a>/
+.clearfix:before, .clearfix:after {</p>
+
+<pre>content: &quot; &quot;;
+display: table;</pre>
+
+<p>}</p>
+
+<p>.clearfix:after {</p>
+
+<pre>clear: both;</pre>
+
+<p>}</p>
+
+<p>/*********************/ /* LAYOUT / SECTIONS */ /*********************/</p>
+
+<p>// // .masthead //</p>
+
+<p>.wrapper-masthead {</p>
+
+<pre>margin-bottom: 50px;</pre>
+
+<p>}</p>
+
+<p>.masthead {</p>
+
+<pre>padding: 20px 0;
+border-bottom: 1px solid $lightGray;
+
+@include mobile {
+  text-align: center;
+}</pre>
+
+<p>}</p>
+
+<p>.site-avatar {</p>
+
+<pre>float: left;
+width: 70px;
+height: 70px;
+margin-right: 15px;
+
+@include mobile {
+  float: none;
+  display: block;
+  margin: 0 auto;
+}
+
+img {
+  border-radius: 5px;
+}</pre>
+
+<p>}</p>
+
+<p>.site-info {</p>
+
+<pre>float: left;
+
+@include mobile {
+  float: none;
+  display: block;
+  margin: 0 auto;
+}</pre>
+
+<p>}</p>
+
+<p>.site-name {</p>
+
+<pre>margin: 0;
+color: $darkGray;
+cursor: pointer;
+font-family: $helveticaNeue;
+font-weight: 300;
+font-size: 28px;
+letter-spacing: 1px;</pre>
+
+<p>}</p>
+
+<p>.site-description {</p>
+
+<pre>margin: -5px 0 0 0;
+color: $gray;
+font-size: 16px;
+
+@include mobile {
+  margin: 3px 0;
+}</pre>
+
+<p>}</p>
+
+<p>nav {</p>
+
+<pre>float: right;
+margin-top: 23px; // @TODO: Vertically middle align
+font-family: $helveticaNeue;
+font-size: 18px;
+
+@include mobile {
+  float: none;
+  margin-top: 9px;
+  display: block;
+  font-size: 16px;
+}
+
+a {
+  margin-left: 20px;
+  color: $darkGray;
+  text-align: right;
+  font-weight: 300;
+  letter-spacing: 1px;
+
+  @include mobile {
+    margin: 0 10px;
+    color: $blue;
+  }
+}</pre>
+
+<p>}</p>
+
+<p>// // .main //</p>
+
+<p>.posts &gt; .post {</p>
+
+<pre>padding-bottom: 2em;
+border-bottom: 1px solid $lightGray;</pre>
+
+<p>}</p>
+
+<p>.posts &gt; .post:last-child {</p>
+
+<pre>padding-bottom: 1em;
+border-bottom: none;</pre>
+
+<p>}</p>
+
+<p>.post {</p>
+
+<pre>blockquote {
+  margin: 1.8em .8em;
+  border-left: 2px solid $gray;
+  padding: 0.1em 1em;
+  color: $gray;
+  font-size: 22px;
+  font-style: italic;
+}
+
+.comments {
+  margin-top: 10px;
+}
+
+.read-more {
+  text-transform: uppercase;
+  font-size: 15px;
+}</pre>
+
+<p>}</p>
+
+<p>.wrapper-footer {</p>
+
+<pre>margin-top: 50px;
+border-top: 1px solid #ddd;
+border-bottom: 1px solid #ddd;
+background-color: $lightGray;</pre>
+
+<p>}</p>
+
+<p>footer {</p>
+
+<pre>padding: 20px 0;
+text-align: center;</pre>
+
+<p>}</p>
+
+<p>// Settled on moving the import of syntax highlighting to the bottom of the
+CSS // … Otherwise it really bloats up the top of the CSS file and makes it
+difficult to find the start @import “highlights”; @import “svg-icons”;</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
