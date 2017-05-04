@@ -84,8 +84,3 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
-
-# for theme
-    ```yml
-    theme: jekyll-theme-modernist
-    ```
