@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Generative Adversarial Nets
+title: "Generative Adversarial Nets"
 use_math: true
 ---
 #Generative Adversarial Nets 
