@@ -1,3 +1,8 @@
+---
+layout: post
+title: Generative Adversarial Nets
+use_math: true
+---
 #Generative Adversarial Nets 
 April 29, 2017 4:42 AM
 
