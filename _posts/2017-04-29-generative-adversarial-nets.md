@@ -11,7 +11,9 @@ tags:
 - PR12
 ---
 
-이달 초 TensorFlowKR facebook community에서 [PR12](https://youtu.be/auKdde7Anr8?list=PLlMkM4tgfjnJhhd4wn5aj8fVTYJwIpWkS)라는 논문 읽기 모임이 만들어졌습니다. 잘 알려진 엄태웅 님의 [Awesome - Most Cited Deep Learning Papers](https://github.com/terryum/awesome-deep-learning-papers)에 소개된 논문 100편을 1년 동안 매주 2편씩 스터디 하고 있습니다. PR12에서 다룬 첫 번째 논문이 지금 소개하려는 Ian J. Goodfellow의 ["Generative Adversarial Nets"](http://arxiv.org/abs/1406.2661v1)입니다.
+오늘 소개하려는 Ian J. Goodfellow의 ["Generative Adversarial Nets"](http://arxiv.org/abs/1406.2661v1)는 이달 초 시작된 [PR12](https://youtu.be/auKdde7Anr8?list=PLlMkM4tgfjnJhhd4wn5aj8fVTYJwIpWkS)의 첫 번째 논문입니다. 
+
+PR12는 facebook TensorFlowKR community에서 만들어진 논문 읽기 모임입니다. 엄태웅 님의 [Awesome - Most Cited Deep Learning Papers](https://github.com/terryum/awesome-deep-learning-papers)에 소개된 논문 100편을 1년 동안 매주 2편씩 스터디 하고 있습니다. 
 
 GAN은 2016년에 가장 많은 관심을 받았던 주제이며, unsupervised learning의 한 가지 방법입니다. Yann LeCun 교수가 ["the most interesting idea in the last 10 years in ML"](https://www.quora.com/What-are-some-recent-and-potentially-upcoming-breakthroughs-in-deep-learning)로 꼽아 유명세를 타기도 했습니다.
 

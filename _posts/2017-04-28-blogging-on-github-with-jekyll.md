@@ -11,11 +11,9 @@ tags:
 - Blog
 ---
 
-GitHub에 블로그를 만들려면 알아야 할 것이 많습니다. 
+GitHub에 블로그를 만들려면 알아야 할 것이 많습니다. 티스토리나 WordPress를 쓰던 것과는 사뭇 다른 방식이라서 처음에 고생하게 되는데, 이 블로그를 꾸미며 배운 것들을 간단히 정리해 보겠습니다.
 
-GitHub의 블로그는 [GitHub Pages](https://pages.github.com/)가 제공하는 기능으로, GitHub repository에서 직접 static한 웹 페이지를 호스팅합니다. 이를 위해서는 [Jekyll](https://jekyllrb.com/)이라는 정적 사이트 생성기(static site generator)를 설치해야 하는데, Jekyll 자체가 ruby gem 형태로 번들되는 형태라서 터미널에서 설정할 것과 설치할 것이 꽤 있습니다. 
-
-티스토리나 WordPress를 쓰던 것과는 사뭇 다른 방식이라서 처음에 고생하게 되는데, 이 블로그를 꾸미며 배운 것들을 간단히 정리해 보겠습니다.
+GitHub의 블로그는 [GitHub Pages](https://pages.github.com/)가 제공하는 기능으로, GitHub repository에서 직접 static한 웹 페이지를 호스팅합니다. 이를 위해서는 [Jekyll](https://jekyllrb.com/)이라는 정적 사이트 생성기(static site generator)를 설치해야 합니다. Jekyll 자체가 ruby 언어의 gem 형태로 번들되기 때문에, 터미널에서 설정하고 설치하는 작업이 약간 필요합니다. 
 
 ## Jekyll Now
 
@@ -27,18 +25,42 @@ GitHub의 블로그는 [GitHub Pages](https://pages.github.com/)가 제공하는
 
 Jekyll의 웹페이지에는 마치 많은 Theme이 있는 것처럼 보입니다. 하지만 Jekyll Now를 사용할 경우, Jekyll Now에서 [검증된 별도의 Theme](https://github.com/barryclark/jekyll-now#other-forkable-themes)을 사용하는 것이 훨씬 쉽습니다. Jekyll Theme을 적용하는 [GitHub Pages의 공식 문서](https://help.github.com/articles/creating-a-github-pages-site-with-the-jekyll-theme-chooser/)의 설명은 Jekyll Now에서는 동작하지 않습니다. 섣불리 시도했다가 ruby의 알 수 없는 에러 메세지들을 만나는 것은 물론, 파일도 날아가는 경우가 있습니다. Jekyll Now의 새로운 Theme을 적용하는 것은 처음 GitHub에서 fork하는 것부터 시도하는 것이 가장 쉬운 방법인 것 같습니다.
 
+## Front Matter
+
+[Front matter](https://jekyllrb.com/docs/frontmatter/)는 각 페이지에서 Jekyll에 특별한 속성 정보(메타 데이터)를 전달하는 방법입니다. Front matter는 각 페이지(html 또는 markdown)의 시작 부분에 아래처럼 `---`로 구분된 블록 형태로 되어 있습니다. 
+
+```html
+---
+layout: post
+title: Blogging Like a Hacker
+---
+<!--
+your markdown or html starts here
+-->
+```
+
+Front matter는 다소 생소한 `yaml` 문법으로 되어 있지만 사용하기 쉽습니다. 위의 예에서 보인 `layout`, `title` 외에도, `date`, `permalink`, `published`, `categories`, `tags` 등을 설정해 줄 수 있습니다.
+
 ## MathJax
 
 Jekyll에서 수학식을 표시하려면 [MathJax](https://github.com/mathjax/MathJax)를 사용합니다. MathJax를 지원하는 것은 `_config.yml`을 수정하고 `_includes` 디렉토리에 `mathjax_support.html`라는 파일을 추가하는 것으로 간단히 [설정](http://benlansdell.github.io/computing/mathjax/)할 수 있습니다. 
 
-이 때 주의할 것은, 수학식이 들어가는 페이지(예를 들면 새 post)의 `front matter` 부분에서 `use_math : true`라고 선언을 해줘야 한다는 점입니다. [Front matter](https://jekyllrb.com/docs/frontmatter/)는 Jekyll에서 사용하는 `yaml` 문법의 메타 데이터입니다. 말은 어렵지만 사용은 어렵지 않은데, 모든 페이지(html 또는 md)의 시작 부분에 아래처럼 `---`로 구분된 블록을 만들어 속성을 간단히 적어주면 됩니다.
-```markdown
+이 때 주의할 것은, 수학식이 들어가는 페이지(예를 들면 새 post)의 `front matter` 부분에서 `use_math : true`라고 선언을 해줘야 한다는 점입니다. 방금 위에서 보인 코드라면 아래처럼 수정해주면 됩니다.
+
+```html
 ---
 layout: post
 title: Blogging Like a Hacker
 use_math: true
 ---
+<!--
+your markdown or html starts here
+-->
 ```
+
+## Google Analytics
+
+
 
 ## References
 
