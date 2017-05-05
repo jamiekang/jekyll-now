@@ -11,32 +11,72 @@ tags:
 - Blog
 ---
 
-GitHub로 블로그를 옮기면서 WordPress, 티스토리 등의 블로그 플랫폼과 다른 환경에 새로 알아야할 것이 많았습니다. 기억을 위해 간단히 정리해 봅니다.
+GitHub에 블로그를 만들려면 알아야 할 것이 많습니다. 
 
+GitHub의 블로그는 [GitHub Pages](https://pages.github.com/)가 제공하는 기능으로, GitHub repository에서 직접 static한 웹 페이지를 호스팅합니다. 이를 위해서는 [Jekyll](https://jekyllrb.com/)이라는 정적 사이트 생성기(static site generator)를 설치해야 하는데, Jekyll 자체가 ruby gem 형태로 번들되는 형태라서 터미널에서 설정할 것과 설치할 것이 꽤 있습니다. 
 
-> ![Algorithm1]({{ site.baseurl }}/media/2017-04-29-generative-adversarial-nets-algorithm1.png)
+티스토리나 WordPress를 쓰던 것과는 사뭇 다른 방식이라서 처음에 고생하게 되는데, 이 블로그를 꾸미며 배운 것들을 간단히 정리해 보겠습니다.
 
-요약하면, stochastic gradient descent (SGD) 계열의 알고리즘을 적용해 minibatch 단위로 Discriminator $D(x)$와 Generator $G(z)$를 번갈아 가며 training 시킵니다. 일반적으로 $D(x)$가 $G(z)$보다 빨리 성장하는 경향이 있습니다. 그런 경우, $G(z)$가 아직 미숙한데 $D(x)$가 너무 결과를 잘 판별해 버리면 $G(z)$가 쉽게 죽어버립니다. 두 모델이 균형 있게 성장하도록 많은 튜닝이 필요합니다. 
+## Jekyll Now
 
-현재까지 알려진 GAN의 장단점은 아래와 같습니다.
-- 장점
-	- 결과물의 quality가 좋다: VAE등 기존 연구 대비 선명
-	- 출력이 빨리 나온다: PixelRNN등 픽셀 단위 출력 대비
-- 단점
-	- training이 unstable하다.
-	- 정량적 quality 측정 기준 미비: 사람의 주관적 판단에 의존
-	- oscillation: 오래 training해도 더 이상 수렴 못하는 현상
-	- mode collapsing 문제: 비슷비슷한 결과물이 나오는 현상
+먼저 알아야 할 것은, GitHub pages에서 Jekyll을 사용하는 것이 일반적이지만 Jekyll의 모든 기능이 GitHub pages에서 허용되는 것은 아니라는 점입니다. 예를 들어, [Jekyll의 plugin 기능은 GitHub에서 동작하지 않습니다](http://charliepark.org/jekyll-with-plugins/). 그래서 Jekyll 자체의 문서만 보면서 작업을 하다보면 GitHub에서 여러가지 문제가 생길 수 있습니다. 또한 ruby의 설치 등 잡다한 과정이 다소 귀찮을 수도 있습니다.
 
-최근 GAN의 인기는 앞서 언급한 Arjovsky의 [WGAN](https://arxiv.org/pdf/1701.07875v1.pdf), Radford의 [DCGAN](https://arxiv.org/abs/1511.06434), Chen의 [InfoGAN](https://arxiv.org/abs/1606.03657) 등 다양한 후속 연구에 힘입은 바가 큽니다. 이에 대해서는 다른 포스팅에서 더 다뤄보도록 하겠습니다.
+검색해 보면 Jekyll로 GitHub에 블로그를 더 쉽게 시작하도록 도와주는 프로젝트들이 있습니다. 그 중에서 검색 결과 최상단에 나오는 것이 [Jekyll Now](https://github.com/barryclark/jekyll-now)이며, 저도 사용했습니다. 역시 또 알아야 할 것은, Jekyll Now 또한 Jekyll로 GitHub에 블로그를 설치하는 여러 방법 중의 하나일 뿐이며 제약점도 많이 가지고 있다는 점입니다. 아래에서 더 설명하겠습니다.
 
+## Theme
 
-**References**
-- [엄태웅 님의 "Awesome - Most Cited Deep Learning Papers"](https://github.com/terryum/awesome-deep-learning-papers)
-- [Ian Goodfellow의 paper @arXiv.org](http://arxiv.org/abs/1406.2661v1)
-- [유재준 님의 블로그 "초짜 대학원생 입장에서 이해하는 Generative Adversarial Nets (1)"](http://jaejunyoo.blogspot.com/2017/01/generative-adversarial-nets-1.html)
-- [유재준 님의 블로그 "초짜 대학원생 입장에서 이해하는 Generative Adversarial Nets (2)"](http://jaejunyoo.blogspot.com/2017/01/generative-adversarial-nets-2.html)
-- [Ian Goodfellow의 NIPS 2016 Tutorial 슬라이드](https://media.nips.cc/Conferences/2016/Slides/6202-Slides.pdf)
-- [Ian Goodfellow의 NIPS 2016 Tutorial 동영상](https://sec.ch9.ms/ch9/6b3d/57930795-7f62-4218-8e18-888623426b3d/Goodfellow_mid.mp4)
-- [김남주 님의 slide "Generative Adversarial Networks (GAN)"](https://www.slideshare.net/ssuser77ee21/generative-adversarial-networks-70896091?qid=73145ce5-644c-4d03-8d55-b2da0a8b28e2&v=&b=&from_search=1)
+Jekyll의 웹페이지에는 마치 많은 Theme이 있는 것처럼 보입니다. 하지만 Jekyll Now를 사용할 경우, Jekyll Now에서 [검증된 별도의 Theme](https://github.com/barryclark/jekyll-now#other-forkable-themes)을 사용하는 것이 훨씬 쉽습니다. Jekyll Theme을 적용하는 [GitHub Pages의 공식 문서](https://help.github.com/articles/creating-a-github-pages-site-with-the-jekyll-theme-chooser/)의 설명은 Jekyll Now에서는 동작하지 않습니다. 섣불리 시도했다가 ruby의 알 수 없는 에러 메세지들을 만나는 것은 물론, 파일도 날아가는 경우가 있습니다. Jekyll Now의 새로운 Theme을 적용하는 것은 처음 GitHub에서 fork하는 것부터 시도하는 것이 가장 쉬운 방법인 것 같습니다.
 
+## MathJax
+
+Jekyll에서 수학식을 표시하려면 [MathJax](https://github.com/mathjax/MathJax)를 사용합니다. MathJax를 지원하는 것은 `_config.yml`을 수정하고 `_includes` 디렉토리에 `mathjax_support.html`라는 파일을 추가하는 것으로 간단히 [설정](http://benlansdell.github.io/computing/mathjax/)할 수 있습니다. 
+
+이 때 주의할 것은, 수학식이 들어가는 페이지(예를 들면 새 post)의 `front matter` 부분에서 `use_math : true`라고 선언을 해줘야 한다는 점입니다. [Front matter](https://jekyllrb.com/docs/frontmatter/)는 Jekyll에서 사용하는 `yaml` 문법의 메타 데이터입니다. 말은 어렵지만 사용은 어렵지 않은데, 모든 페이지(html 또는 md)의 시작 부분에 아래처럼 `---`로 구분된 블록을 만들어 속성을 간단히 적어주면 됩니다.
+```markdown
+---
+layout: post
+title: Blogging Like a Hacker
+use_math: true
+---
+```
+
+## References
+
+**Jekyll Blog 일반**
+- Jekyll Blog의 [local copy @127.0.0.1:4000](http://127.0.0.1:4000/)
+- Jekyll Bootstrap의 [Jekyll QuickStart](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+- Jekyll의 [공식 Docs](https://jekyllrb.com/docs/home/)
+- Stack Overflow의 [Jekyll tagged questions](https://stackoverflow.com/questions/tagged/jekyll)
+- GitHub의 [Pages 공식 페이지](https://pages.github.com/)
+- GitHub Help의 [Adding a Jekyll theme to your GitHub Pages site](https://help.github.com/articles/adding-a-jekyll-theme-to-your-github-pages-site/)
+- 한량넷의 [초보자를 위한 Jekyll Blog 시작하기](http://www.halryang.net/Jekyll-Blogging-For-Beginners/)
+- 놀부 님의 [지킬로 깃허브에 무료 블로그 만들기](https://nolboo.kim/blog/2013/10/15/free-blog-with-github-jekyll/)
+- Anatol Broder의 [Compress HTML in Jekyll](https://github.com/penibelst/jekyll-compress-html)
+- Will Koehler의 [Save 50 Hours Setting up Your Jekyll Blog](http://willkoehler.net/2014/08/26/save-50-hours-setting-up-your-jekyll-blog.html)
+
+**Jekyll Now**
+- Barry clark의 [Jekyll Now](https://github.com/barryclark/jekyll-now)
+- Smashing Magazine의 [Build A Blog With Jekyll And GitHub Pages](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/)
+- taehwan 님의 [GitHub 블로그 빠르게 시작하기!](http://thdev.net/653)
+
+**Jekyll Now Theme**
+- 한량넷의 [Easyjekyll](https://github.com/easyjekyll/easyjekyll.github.io/)
+- Mark Otto의 [Hyde](https://github.com/poole/hyde)
+- Mark Otto의 [Lanyon](https://github.com/poole/lanyon)
+- Michael Rose의 [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes)
+- Barry clark의 [Jekyll Now - Other forkable themes](https://github.com/barryclark/jekyll-now#other-forkable-themes)
+
+**MathJax**
+- GitHub의 [공식 MathJax repository](https://github.com/mathjax/MathJax)
+- Ben Lansdell의 [MathJax, Jekyll and github pages](http://benlansdell.github.io/computing/mathjax/)
+
+**Google Analytics**
+- 티스토리 블로그 채널의 [구글 애널리틱스 설치 사용법 및 팁 노하우](http://blogchannel.tistory.com/149)
+- 에르차마토리 웹로그의 [구글 아널리틱스를 이용하여 블로그를 완벽하게 분석하는 방법](http://www.erzsamatory.net/42)
+- loustler 님의 [Jekyll을 이용한 Github pages 만들기[심화/Google Analytics 적용]](http://loustler.io/2016/09/26/github_pages_blog_google_analytics/)
+
+**Markdown**
+- Adam Pritchard의 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+**GitHub**
+- 놀부 님의 [완전 초보를 위한 깃허브](https://nolboo.kim/blog/2013/10/06/github-for-beginner/)
