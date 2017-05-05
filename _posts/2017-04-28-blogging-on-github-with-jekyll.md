@@ -13,17 +13,17 @@ tags:
 
 GitHub에 블로그를 만들려면 알아야 할 것이 많습니다. 티스토리나 WordPress를 쓰던 것과는 사뭇 다른 방식이라서 처음에 고생하게 되는데, 이 블로그를 꾸미며 배운 것들을 간단히 정리해 보겠습니다.
 
-GitHub의 블로그는 [GitHub Pages](https://pages.github.com/)가 제공하는 기능으로, GitHub repository에서 직접 static한 웹 페이지를 호스팅합니다. 이를 위해서는 [Jekyll](https://jekyllrb.com/)이라는 정적 사이트 생성기(static site generator)를 설치해야 합니다. Jekyll 자체가 ruby 언어의 gem 형태로 번들되기 때문에, 터미널에서 설정하고 설치하는 작업이 약간 필요합니다. 
+GitHub의 블로그는 [GitHub Pages](https://pages.github.com/)가 제공하는 기능으로, GitHub repository에서 직접 static한 웹 페이지를 호스팅합니다. 이를 위해서는 [Jekyll](https://jekyllrb.com/)이라는 정적 사이트 생성기(static site generator)를 설치해야 합니다. Jekyll 자체가 ruby 언어의 gem 형태로 번들 되기 때문에, 터미널에서 설정하고 설치하는 작업이 약간 필요합니다. 
 
 ## Jekyll Now
 
-먼저 알아야 할 것은, GitHub pages에서 Jekyll을 사용하는 것이 일반적이지만 Jekyll의 모든 기능이 GitHub pages에서 허용되는 것은 아니라는 점입니다. 예를 들어, [Jekyll의 plugin 기능은 GitHub에서 동작하지 않습니다](http://charliepark.org/jekyll-with-plugins/). 그래서 Jekyll 자체의 문서만 보면서 작업을 하다보면 GitHub에서 여러가지 문제가 생길 수 있습니다. 또한 ruby의 설치 등 잡다한 과정이 다소 귀찮을 수도 있습니다.
+먼저 알아야 할 것은, GitHub pages에서 Jekyll을 사용하는 것이 일반적이지만 Jekyll의 모든 기능이 GitHub pages에서 허용되는 것은 아니라는 점입니다. 예를 들어, [Jekyll의 plugin 기능은 GitHub에서 동작하지 않습니다](http://charliepark.org/jekyll-with-plugins/). 그래서 Jekyll 자체의 문서만 보면서 작업을 하다 보면 GitHub에서 여러가지 문제가 생길 수 있습니다. 또한 ruby의 설치 등 잡다한 과정이 다소 귀찮을 수도 있습니다.
 
 검색해 보면 Jekyll로 GitHub에 블로그를 더 쉽게 시작하도록 도와주는 프로젝트들이 있습니다. 그 중에서 검색 결과 최상단에 나오는 것이 [Jekyll Now](https://github.com/barryclark/jekyll-now)이며, 저도 사용했습니다. 역시 또 알아야 할 것은, Jekyll Now 또한 Jekyll로 GitHub에 블로그를 설치하는 여러 방법 중의 하나일 뿐이며 제약점도 많이 가지고 있다는 점입니다. 아래에서 더 설명하겠습니다.
 
 ## Theme
 
-Jekyll의 웹페이지에는 마치 많은 Theme이 있는 것처럼 보입니다. 하지만 Jekyll Now를 사용할 경우, Jekyll Now에서 [검증된 별도의 Theme](https://github.com/barryclark/jekyll-now#other-forkable-themes)을 사용하는 것이 훨씬 쉽습니다. Jekyll Theme을 적용하는 [GitHub Pages의 공식 문서](https://help.github.com/articles/creating-a-github-pages-site-with-the-jekyll-theme-chooser/)의 설명은 Jekyll Now에서는 동작하지 않습니다. 섣불리 시도했다가 ruby의 알 수 없는 에러 메세지들을 만나는 것은 물론, 파일도 날아가는 경우가 있습니다. Jekyll Now의 새로운 Theme을 적용하는 것은 처음 GitHub에서 fork하는 것부터 시도하는 것이 가장 쉬운 방법인 것 같습니다.
+Jekyll의 웹페이지에는 마치 많은 Theme이 있는 것처럼 보입니다. 하지만 Jekyll Now를 사용할 경우, Jekyll Now에서 [검증된 별도의 Theme](https://github.com/barryclark/jekyll-now#other-forkable-themes)을 사용하는 것이 훨씬 쉽습니다. Jekyll Theme을 적용하는 [GitHub Pages의 공식 문서](https://help.github.com/articles/creating-a-github-pages-site-with-the-jekyll-theme-chooser/)의 설명은 Jekyll Now에서는 동작하지 않습니다. 섣불리 시도했다가 ruby의 알 수 없는 에러 메시지들을 만나는 것은 물론, 파일도 날아가는 경우가 있습니다. Jekyll Now의 새로운 Theme을 적용하는 것은 처음 GitHub에서 fork하는 것부터 시도하는 것이 가장 쉬운 방법인 것 같습니다.
 
 ## Front Matter
 
@@ -60,7 +60,13 @@ your markdown or html starts here
 
 ## Google Analytics
 
+티스토리, 네이버 블로그와 달리 Jekyll은 자체적으로 방문자 통계를 관리하지 않습니다. 오늘 내 블로그에 몇 명이 방문했고, 어떤 검색으로 찾아 왔는지와 같은 기본 정보를 알기 위해서는 [Google Analytics](https://analytics.google.com/) 서비스를 사용합니다. 
 
+저는 loustler 님의 [Jekyll을 이용한 Github pages 만들기[심화/Google Analytics 적용]](http://loustler.io/2016/09/26/github_pages_blog_google_analytics/)이라는 포스트 내용을 참고해서 적용했습니다. Google Analytics에 가입할 때 빈 칸 몇 개를 채우는 것이 가장 어려운 일이었을 정도로 설정이 쉽습니다.
+
+![Algorithm1]({{ site.baseurl }}/media/2017-04-28-blogging-on-github-with-jekyll-google-analytics.jpg)
+
+Google Analytics의 분석 결과는 위의 그림과 같이 확인할 수 있다고 합니다. 아직 이 블로그는 보여드릴 만한 통계가 없어서, 위의 이미지는 [flickr](https://www.flickr.com)에 공개된 것을 사용했습니다. 나중에 실제 dashboard 이미지로 바꿔 보여드리겠습니다.
 
 ## References
 
@@ -73,6 +79,7 @@ your markdown or html starts here
 - GitHub Help의 [Adding a Jekyll theme to your GitHub Pages site](https://help.github.com/articles/adding-a-jekyll-theme-to-your-github-pages-site/)
 - 한량넷의 [초보자를 위한 Jekyll Blog 시작하기](http://www.halryang.net/Jekyll-Blogging-For-Beginners/)
 - 놀부 님의 [지킬로 깃허브에 무료 블로그 만들기](https://nolboo.kim/blog/2013/10/15/free-blog-with-github-jekyll/)
+- KaKao Tech Blog의 [kakao 기술 블로그가 GitHub Pages로 간 까닭은](http://tech.kakao.com/2016/07/07/tech-blog-story/)
 - Anatol Broder의 [Compress HTML in Jekyll](https://github.com/penibelst/jekyll-compress-html)
 - Will Koehler의 [Save 50 Hours Setting up Your Jekyll Blog](http://willkoehler.net/2014/08/26/save-50-hours-setting-up-your-jekyll-blog.html)
 
